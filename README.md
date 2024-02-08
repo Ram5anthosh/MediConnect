@@ -1,16 +1,6 @@
 # smartwatch_application
 
-A new Flutter project.
+Team Members : Ram Santhosh IEC2021019, Upasana IEC2021112, Vikram IEC2021116
+Biomedical Signal Processing of ECG activity from smart watch sensors. 
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Mentor : Prof.Shanti Chandra
