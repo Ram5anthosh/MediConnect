@@ -67,6 +67,20 @@ class _MyHomeState extends State<MyHome> {
                           fontSize: 18),
                     ),
                   ),
+                  TextButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, 'dashboard');
+                    },
+                    style: ButtonStyle(),
+                    child: Text(
+                      'Dashboard',
+                      textAlign: TextAlign.left,
+                      style: TextStyle(
+                          decoration: TextDecoration.underline,
+                          color: Colors.black,
+                          fontSize: 18),
+                    ),
+                  )
                 ],
               )
             )
