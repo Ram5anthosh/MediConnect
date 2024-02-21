@@ -1,9 +1,7 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
 
 class MyHome extends StatefulWidget {
-  const MyHome({super.key});
+  const MyHome({Key? key});
 
   @override
   State<MyHome> createState() => _MyHomeState();
@@ -14,8 +12,11 @@ class _MyHomeState extends State<MyHome> {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        image: DecorationImage(
-            image: AssetImage('assets/startup.png'), fit: BoxFit.cover),
+        gradient: LinearGradient(
+          colors: [Color(0xFF6A1B9A), Color(0xFFAB83A1)],
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+        ),
       ),
       child: Scaffold(
         backgroundColor: Colors.transparent,
@@ -29,7 +30,7 @@ class _MyHomeState extends State<MyHome> {
               padding: EdgeInsets.only(left: 35, top: 30),
               child: Text(
                 'Indian Institute of Information Technology',
-                style: TextStyle(color: Colors.black, fontSize: 33),
+                style: TextStyle(color: Colors.white, fontSize: 33),
               ),
             ),
             SizedBox(
@@ -49,7 +50,7 @@ class _MyHomeState extends State<MyHome> {
                       textAlign: TextAlign.left,
                       style: TextStyle(
                           decoration: TextDecoration.underline,
-                          color: Colors.black,
+                          color: Colors.white,
                           fontSize: 18),
                     ),
                   ),
@@ -63,7 +64,7 @@ class _MyHomeState extends State<MyHome> {
                       textAlign: TextAlign.left,
                       style: TextStyle(
                           decoration: TextDecoration.underline,
-                          color: Colors.black,
+                          color: Colors.white,
                           fontSize: 18),
                     ),
                   ),
@@ -77,14 +78,14 @@ class _MyHomeState extends State<MyHome> {
                       textAlign: TextAlign.left,
                       style: TextStyle(
                           decoration: TextDecoration.underline,
-                          color: Colors.black,
+                          color: Colors.white,
                           fontSize: 18),
                     ),
-                  )
+                  ),
                 ],
-              )
-            )
-          ]
+              ),
+            ),
+          ],
         ),
       ),
     );
