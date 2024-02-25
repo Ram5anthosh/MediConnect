@@ -5,6 +5,7 @@ import 'package:smartwatch_application/register.dart';
 import 'package:smartwatch_application/home.dart';
 import 'package:smartwatch_application/doctorinfo.dart';
 import 'package:smartwatch_application/healthcenter.dart';
+import 'package:smartwatch_application/doctorregister.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -17,6 +18,7 @@ void main() {
       'dashboard':(context)=>const StartScreen(),
       'doctorinfo':(context)=>const DoctorInfoScreen(),
       'healthcenter':(context)=>const HospitalInfoScreen(),
+      'doctorregister':(context)=>DoctorRegister(),
     },
   ));
 }

@@ -29,8 +29,15 @@ class _MyHomeState extends State<MyHome> {
             Container(
               padding: EdgeInsets.only(left: 35, top: 30),
               child: Text(
-                'Indian Institute of Information Technology',
-                style: TextStyle(color: Colors.white, fontSize: 33),
+                'MediConnectIIITA',
+                style: TextStyle(color: Color.fromARGB(255, 95, 243, 3), fontSize: 33),
+              ),
+            ),
+            Container(
+              padding: EdgeInsets.only(left:35,top:30),
+              child: Text(
+                'At IIITA, we believe in empowering every step of your healthy lifestyle, syncing heartbeats with aspirations ',
+                style: TextStyle(color: Color.fromARGB(255, 221, 228, 11), fontSize: 20),
               ),
             ),
             SizedBox(

@@ -11,125 +11,138 @@ class _MyLoginState extends State<MyLogin> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            colors: [Color(0xFF6A1B9A), Color(0xFFAB83A1)],
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-          ),
-        ),
-        child: SingleChildScrollView(
-          child: Stack(
-            children: [
-              Positioned(
-                left: 35,
-                top: 130,
-                child: Text(
-                  'Welcome\nBack',
-                  style: TextStyle(color: Colors.white, fontSize: 33),
-                ),
+      body: Stack(
+        fit: StackFit.expand,
+        children: [
+          Container(
+            decoration: const BoxDecoration(
+              gradient: LinearGradient(
+                colors: [Color(0xFF6A1B9A), Color(0xFFAB83A1)],
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
               ),
-              Padding(
-                padding: EdgeInsets.only(
-                  top: MediaQuery.of(context).size.height * 0.5,
-                  right: 35,
-                  left: 35,
+            ),
+          ),
+          Positioned(
+            left: 15,
+            top: 30,
+            child: IconButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              icon: const Icon(Icons.arrow_back, color: Colors.white),
+            ),
+          ),
+          const Positioned(
+            left: 35,
+            top: 130,
+            child: Text(
+              'Welcome\nBack',
+              style: TextStyle(color: Colors.white, fontSize: 33),
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.only(
+              top: MediaQuery.of(context).size.height * 0.45,
+              right: 35,
+              left: 35,
+            ),
+            child: Column(
+              children: [
+                Container(
+                  width: MediaQuery.of(context).size.width * 0.8,
+                  child: TextField(
+                    maxLines: 1,
+                    decoration: InputDecoration(
+                      fillColor: Colors.grey.shade100,
+                      filled: true,
+                      hintText: 'Email',
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                    ),
+                  ),
                 ),
-                child: Column(
+                const SizedBox(height: 30),
+                Container(
+                  width: MediaQuery.of(context).size.width * 0.8,
+                  child: TextField(
+                    obscureText: true,
+                    maxLines: 1,
+                    decoration: InputDecoration(
+                      fillColor: Colors.grey.shade100,
+                      filled: true,
+                      hintText: 'Password',
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 40),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    TextField(
-                      decoration: InputDecoration(
-                        fillColor: Colors.grey.shade100,
-                        filled: true,
-                        hintText: 'Email',
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(10),
-                        ),
+                    const Text(
+                      'SignIn',
+                      style: TextStyle(
+                        color: Color(0xff4c505b),
+                        fontSize: 27,
+                        fontWeight: FontWeight.w700,
                       ),
                     ),
-                    const SizedBox(height: 30),
-                    TextField(
-                      obscureText: true,
-                      decoration: InputDecoration(
-                        fillColor: Colors.grey.shade100,
-                        filled: true,
-                        hintText: 'Password',
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                      ),
-                    ),
-                    const SizedBox(height: 40),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          'SignIn',
-                          style: TextStyle(
-                            color: Color(0xff4c505b),
-                            fontSize: 27,
-                            fontWeight: FontWeight.w700,
-                          ),
-                        ),
-                        CircleAvatar(
-                          radius: 30,
-                          backgroundColor: Color(0xff4c505b),
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: IconButton(
-                              color: Colors.white,
-                              onPressed: () {},
-                              icon: Icon(Icons.arrow_forward),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                    SizedBox(height: 40),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        TextButton(
-                          onPressed: () {
-                            Navigator.pushNamed(context, 'register');
-                          },
-                          child: Text(
-                            'Sign Up',
-                            style: TextStyle(
-                              decoration: TextDecoration.underline,
-                              fontSize: 18,
-                              color: Color(0xff4c505b),
-                            ),
-                          ),
-                        ),
-                        TextButton(
+                    CircleAvatar(
+                      radius: 30,
+                      backgroundColor: Color(0xff4c505b),
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: IconButton(
+                          color: Colors.white,
                           onPressed: () {},
-                          child: Text(
-                            'Forgot Password',
-                            style: TextStyle(
-                              decoration: TextDecoration.underline,
-                              fontSize: 18,
-                              color: Color(0xff4c505b),
-                            ),
-                          ),
+                          icon: Icon(Icons.arrow_forward),
                         ),
-                      ],
-                    ),
-                    const SizedBox(height: 20),
-                    // Add a button to go back
-                    ElevatedButton(
-                      onPressed: () {
-                        Navigator.pop(context);
-                      },
-                      child: Text('Go Back'),
+                      ),
                     ),
                   ],
                 ),
-              ),
-            ],
+                const SizedBox(height: 40),
+                Expanded(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      TextButton(
+                        onPressed: () {
+                          Navigator.pushNamed(context, 'register');
+                        },
+                        child: const Text(
+                          'Register as User',
+                          style: TextStyle(
+                            decoration: TextDecoration.underline,
+                            fontSize: 18,
+                            color: Color(0xff4c505b),
+                          ),
+                        ),
+                      ),
+                      TextButton(
+                        onPressed: () {
+                          Navigator.pushNamed(context, 'doctorregister');
+                        },
+                        child: const Text(
+                          'Register as Doctor',
+                          style: TextStyle(
+                            decoration: TextDecoration.underline,
+                            fontSize: 18,
+                            color: Color(0xff4c505b),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
           ),
-        ),
+        ],
       ),
     );
   }
