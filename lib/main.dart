@@ -18,7 +18,7 @@ void main() {
       'dashboard':(context)=>const StartScreen(),
       'doctorinfo':(context)=>const DoctorInfoScreen(),
       'healthcenter':(context)=>const HospitalInfoScreen(),
-      'doctorregister':(context)=>DoctorRegister(),
+      'doctorregister':(context)=>const DoctorRegister(),
     },
   ));
 }

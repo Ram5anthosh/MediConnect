@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:smartwatch_application/dashboard.dart';
 
 class MyLogin extends StatefulWidget {
   const MyLogin({Key? key}) : super(key: key);
@@ -91,15 +92,30 @@ class _MyLoginState extends State<MyLogin> {
                         fontWeight: FontWeight.w700,
                       ),
                     ),
-                    CircleAvatar(
-                      radius: 30,
-                      backgroundColor: Color(0xff4c505b),
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: IconButton(
-                          color: Colors.white,
-                          onPressed: () {},
-                          icon: Icon(Icons.arrow_forward),
+                    GestureDetector(
+                      onTap: () {
+                        // Navigator.push(
+                        //   context,
+                        //   MaterialPageRoute(
+                        //       builder: (context) => StartScreen()),
+                        // );
+                      },
+                      child: CircleAvatar(
+                        radius: 30,
+                        backgroundColor: Color(0xff4c505b),
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: IconButton(
+                            color: Colors.white,
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => StartScreen()),
+                              );
+                            },
+                            icon: Icon(Icons.arrow_forward),
+                          ),
                         ),
                       ),
                     ),

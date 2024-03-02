@@ -27,19 +27,19 @@ class DoctorInfoScreen extends StatelessWidget {
             DoctorCard(
               name: 'Dr. R Dayal',
               specialization: 'Cardiologist',
-              imageAsset: 'assets/doctor1.jpg',
+              imageAsset: 'assets/profile.png',
             ),
             SizedBox(height: 10),
             DoctorCard(
               name: 'Dr. Nawabuddin Jaishwal',
               specialization: 'Pediatrician',
-              imageAsset: 'assets/doctor2.jpg',
+              imageAsset: 'assets/profile.png',
             ),
             SizedBox(height: 10),
             DoctorCard(
               name: 'Dr. Tanmay Sharma',
               specialization: 'Orthopedic Surgeon',
-              imageAsset: 'assets/doctor3.jpg',
+              imageAsset: 'assets/profile.png',
             ),
             // Add more DoctorCard widgets as needed
           ],
